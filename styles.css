@@ -1,0 +1,212 @@
+:root {
+    --turquesa-claro: #208F8F;
+    --turquesa-oscuro: #006B6B;
+    --blanco: #ffffff;
+    --gris-claro: #f5f5f5;
+    --gris-texto: #333333;
+    --alternado-claro: #f8fbfb;  /* Color muy sutil para filas alternadas */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--blanco);
+    color: var(--gris-texto);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--turquesa-claro);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: var(--blanco);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--blanco);
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.contact-info {
+    color: var(--blanco);
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+.contact-info a {
+    color: var(--blanco);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.table-container {
+    overflow-x: auto;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: var(--turquesa-oscuro);
+    color: var(--blanco);
+    text-align: left;
+    padding: 12px;
+    font-size: 1.1rem;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--gris-claro);
+}
+
+/* Estilos para filas alternadas (excluyendo las filas de categoría) */
+tr:not(.category-row):nth-child(odd) {
+    background-color: var(--blanco);
+}
+
+tr:not(.category-row):nth-child(even) {
+    background-color: var(--alternado-claro);
+}
+
+tr:hover:not(.category-row) {
+    background-color: var(--gris-claro);
+}
+
+/* Estilo para las filas de categoría */
+.category-row {
+    background-color: var(--turquesa-claro);
+    color: var(--blanco);
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+/* Evitar el efecto hover en las filas de categoría */
+.category-row:hover {
+    background-color: var(--turquesa-claro);
+    cursor: default;
+}
+
+.social-link {
+    color: var(--turquesa-oscuro);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--gris-texto);
+    font-size: 0.9rem;
+    padding: 15px;
+}
+
+.contact-footer {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    background-color: var(--gris-claro);
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.contact-footer a {
+    color: var(--turquesa-oscuro);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .category-row td {
+        font-size: 0.8rem;
+    }
+
+    .contact-info, .contact-footer {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .table-container {
+        padding: 10px;
+    }
+
+    .category-row td {
+        font-size: 0.7rem;
+    }
+
+    .contact-info, .contact-footer {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+}
