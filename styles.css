@@ -38,6 +38,11 @@ header {
 h1 {
     color: var(--blanco);
     font-size: 2.5rem;
+}
+
+h3 {
+    color: var(--blanco);
+    font-size: 1.8rem;
     margin-bottom: 10px;
 }
 
@@ -168,6 +173,10 @@ footer {
         font-size: 2rem;
     }
 
+    h3 {
+        font-size: 1.8rem;
+    }
+
     th, td {
         padding: 10px;
         font-size: 0.9rem;
@@ -190,6 +199,10 @@ footer {
 @media (max-width: 480px) {
     h1 {
         font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
     }
 
     th, td {
